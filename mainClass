@@ -1,0 +1,78 @@
+package linkedlist;
+
+public class mainClass {
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        LinkedList list2;
+        list.insert(12);
+        list.insert(14);
+        list.insert(15);
+        list.insert(17);
+        list.insert(20);
+        list.insert(25);
+        list.deleteLast();
+        list.delete(12);
+        
+        System.out.print("Original List: ");
+        list.printList();
+        System.out.println("");
+        
+
+        System.out.println(list.lowestNumber());
+        System.out.println(list.highestNumber());
+
+        LinkedList list3 = new LinkedList();
+        list3.insert(3);
+        list3.insert(5);
+        list3.insert(45);
+        list3.insert(76);
+
+        LinkedList list4 = new LinkedList();
+        list4.insert(1);
+        list4.insert(6);
+        list4.insert(321);
+        list4.insert(760);
+
+        
+        System.out.print("Original List: ");
+        list.printList();
+        System.out.println("");
+
+        System.out.println("");
+        System.out.println("The number is at index: " + list.search(12));
+        System.out.println("");
+        System.out.println("Sum of Original List: " + list.sum());
+        System.out.println("");
+        System.out.println("Size of Original List: " + list.size());
+
+        System.out.println("");
+
+        list2 = list.copy();
+        System.out.print("Copied List: ");
+        list2.printList();
+        System.out.println("");
+
+        System.out.println("");
+        LinkedList list5;
+        list5 = list.subList(1, 3);
+        System.out.print("Sub List: ");
+        list5.printList();
+        System.out.println("");
+        System.out.println("");
+
+        LinkedList list6;
+        list6 = list.merge(list3);
+        System.out.print("Merge List: ");
+        list6.printList();
+        System.out.println("");
+        System.out.println("");
+
+        list.append(list4);
+        System.out.print("Appended List: ");
+        list.printList();
+        System.out.println("");
+        System.out.println("");
+
+    }
+}
